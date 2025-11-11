@@ -15,6 +15,7 @@ RPrompt-2.docx - the Refined Prompts with LLM assistance and human refinement fo
 
 healthquoteNL_2511.06427v1.pdf - the preprint paper of this stage with methodology and extracted Dutch metaphor examples and their alignment to the original English MetaphorMenu.
 
+HealthQuote.NL corpus - cleaning up to share
 
 
 # Reference:
