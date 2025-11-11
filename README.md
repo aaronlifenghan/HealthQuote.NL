@@ -15,7 +15,7 @@ RPrompt-2.docx - the Refined Prompts with LLM assistance and human refinement fo
 
 healthquoteNL_2511.06427v1.pdf - the preprint paper of this stage with methodology and extracted Dutch metaphor examples and their alignment to the original English MetaphorMenu.
 
-HealthQuote.NL corpus - cleaning up to share
+HealthQuote.NL corpus - cleaning up to share (accessible on demand/request)
 
 
 # Reference:
@@ -29,3 +29,6 @@ HealthQuote.NL corpus - cleaning up to share
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2511.06427}, 
 }
+
+# contact 
+L(dot)Han@lumc.nl
