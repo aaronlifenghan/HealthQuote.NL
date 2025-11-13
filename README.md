@@ -1,12 +1,38 @@
 Dutch Metaphor Extraction and Collection Project in the healthcare and cancer domain - resources to share
 
-
 # Phase-1: Dutch Metaphor Extraction from Cancer Patients' Interviews and Forum Data using LLMs and Human in the Loop
 
 # Summary
+
 Metaphors and metaphorical language (MLs) play an important role in healthcare communication between clinicians, patients, and patients' family members. In this work, we focus on Dutch language data from cancer patients. We extract metaphors used by patients using two data sources: (1) cancer patient storytelling interview data and (2) online forum data, including patients' posts, comments, and questions to professionals. We investigate how current state-of-the-art large language models (LLMs) perform on this task by exploring different prompting strategies such as chain of thought reasoning, few-shot learning, and self-prompting. With a human-in-the-loop setup, we verify the extracted metaphors and compile the outputs into a corpus named HealthQuote.NL. We believe the extracted metaphors can support better patient care, for example shared decision making, improved communication between patients and clinicians, and enhanced patient health literacy. They can also inform the design of personalized care pathways. We share prompts and related resources at this Github URL
 
+# Project Structure
+
+```
+  HealthQuote.NL (root directory)
+ ├── 󰣞 resources
+ │   ├──  RPrompt-1.docx                       # Refined Prompts with LLM assistance and human refinement for LLMs with Chain of Thoughts, examples
+ │   ├──  RPrompt-2.docx                       # Refined Prompts with LLM assistance and human refinement for LLMs with Chain of Thoughts, and the full English MetaphorMenu as context within the prompt
+ │   ├──  'Initial Instruction Prompts.docx'   # Initial Instruction Prompts (IPs) we used on LLMs
+ │   └──  'HealthQuote.NL Corpus'              # Accessible on demand/request
+ ├── 󰣞 src
+ │   └──  metaphor_extraction
+ │       ├──  prompts
+ │       │   ├──  prompt_1.md                  # prompt with Chain of Thoughts and examples
+ │       │   └──  prompt_2.md                  # prompt with Chain of Thoughts and the full English MetaphorMenu as context
+ │       ├──  __init__.py
+ │       ├──  chain.py                         # Handles creation of llm chains
+ │       ├──  config.yaml                      # configuration file for the project
+ │       ├──  pipeline.py                      # main pipeline to run the metaphor extraction
+ │       ├──  structured_output.py             # structured output models
+ │       └──  validation.py                    # validation function for simple check
+ ├──  pyproject.toml                           # project configuration file
+ ├── 󰂺 README.md                                # this file
+ └──  healthquoteNL_2511.06427v1.pdf           # preprint paper of this stage
+```
+
 # Resources:
+
 Initial Instruction Prompts.docx - the Initial Instruction Prompts (IPs) we used on LLMs.
 
 RPrompt-1.docx - the Refined Prompts with LLM assistance and human refinement for LLMs with Chain of Thoughts, examples.
@@ -17,18 +43,18 @@ healthquoteNL_2511.06427v1.pdf - the preprint paper of this stage with methodolo
 
 HealthQuote.NL corpus - cleaning up to share (accessible on demand/request)
 
-
 # Reference:
 
 @misc{han2025dutchmetaphorextractioncancer,
-      title={Dutch Metaphor Extraction from Cancer Patients' Interviews and Forum Data using LLMs and Human in the Loop}, 
-      author={Lifeng Han and David Lindevelt and Sander Puts and Erik van Mulligen and Suzan Verberne},
-      year={2025},
-      eprint={2511.06427},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2511.06427}, 
+title={Dutch Metaphor Extraction from Cancer Patients' Interviews and Forum Data using LLMs and Human in the Loop},
+author={Lifeng Han and David Lindevelt and Sander Puts and Erik van Mulligen and Suzan Verberne},
+year={2025},
+eprint={2511.06427},
+archivePrefix={arXiv},
+primaryClass={cs.CL},
+url={https://arxiv.org/abs/2511.06427},
 }
 
-# contact 
+# contact
+
 L(dot)Han@lumc.nl

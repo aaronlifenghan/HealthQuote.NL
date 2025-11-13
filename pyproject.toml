@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "metaphor_extraction"
+version = "0.1.0"
+description = "A Python tool for extracting and analyzing metaphors from Dutch text documents using large language models. This project provides automated metaphor detection with structured output, validation, and support for multiple llm backends."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.13.5",
+    "langchain>=0.3.27",
+    "langchain-ollama>=0.3.8",
+    "langchain-openai>=0.3.33",
+    "pydantic>=2.11.9",
+    "python-docx>=1.2.0",
+    "rapidfuzz>=3.14.1",
+    "sentence-transformers>=5.1.1",
+]
+
+[tool.hatch.build.targets.wheel]
+# Hatchling can auto-detect, so this section can even be omitted
+# if your structure is standard (src/metaphor_extraction/)
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/README.md",
+]
+exclude = [
+    "*.pyc",
+    "__pycache__",
+    ".git",
+    "tests",
+]

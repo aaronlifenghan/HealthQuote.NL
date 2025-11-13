@@ -1,0 +1,22 @@
+
+prompt_id: 1
+
+text_splitter:
+  max_tokens: 4000 # Set roughly context_length - 500
+  overlap_tokens: 400 # 10% overlap
+  chars_per_token: 4 # Estimation for tokens
+
+default_provider: "ollama"
+
+providers:
+  ollama:
+    base_url: "http://localhost:11434"
+    model_name: "gemma3:27b"
+    options:
+      num_ctx: 32768
+      temperature: 0.8
+      top_k: 40
+      top_p: 0.9
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model_name: "gpt-3.5-turbo"
