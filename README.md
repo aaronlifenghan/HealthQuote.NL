@@ -52,7 +52,7 @@ year={2025},
 eprint={2511.06427},
 archivePrefix={arXiv},
 primaryClass={cs.CL},
-url={https://arxiv.org/abs/2511.06427},
+url={ https://arxiv.org/abs/2511.06427 },
 }
 
 # contact
